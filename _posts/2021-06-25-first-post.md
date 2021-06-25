@@ -1,5 +1,6 @@
 ---
 title: "First Post"
+hidden: true
 date: 2021-06-25
 category: [ Sample ]
 tags: [ guide ]
