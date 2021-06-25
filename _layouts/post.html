@@ -1,31 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Demo</title>
+    <script>
+      if (
+        localStorage.getItem("color-mode") === "dark" ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+          !localStorage.getItem("color-mode"))
+      ) {
+        document.documentElement.setAttribute("color-mode", "dark");
+      }
+    </script>
+    <link rel="stylesheet" href="https://mohamadrido.github.io/parallax-jekyll-theme/assets/main.css" />
 
----
-layout: page
----
+  </head>
+  <body>
+    <svg style="display: none;">
+      <symbol viewBox="0 0 24 24" id="moon">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </symbol>
+      <symbol viewBox="0 0 24 24" id="sun">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </symbol>
+    </svg>
+    <main class="color-mode">
+      <section class="color-mode__section">
+        <header class="color-mode__header">
+          <button
+            class="color-mode__btn light--hidden"
+            aria-label="Toggle light mode"
+          >
+            Light
+            <svg aria-hidden="true">
+              <use href="#sun"></use>
+            </svg>
+          </button>
+          <button
+            class="color-mode__btn dark--hidden"
+            aria-label="Toggle dark mode"
+          >
+            Dark
+            <svg aria-hidden="true">
+              <use href="#moon"></use>
+            </svg>
+          </button>
+<!-- -->
+<button class="color-mode__btn1"><a href="https://mohamadrido.github.io/parallax-jekyll-theme"><img src="https://ggscore.com/media/logo/t10836.png" width="64px"/></a></button>
+<button class="color-mode__btn1"><a href="https://mohamadrido.github.io/parallax-jekyll-theme/about">About</a></button>
+        </header>
 <article>
-{% if page.image %} 
+        <div class="color-mode__container dark--hidden">
+          {% if page.image %} 
 <img alt="{{ page.title }}" title="{{ page.title }}" style="width: 100%; border-radius: 5px;" src="{{ page.image }}">
 {% endif %}
-
+          <h2>Chapter 1</h2>
 {% unless page.metadate == "hide" %} 
 {{ page.date | date: '%B %d, %Y' }} 
 {% endunless %}
 {% if page.author %}
 , by {{page.author | capitalize}} 
-{% endif %}
-
-
-        <div class="color-mode__container dark--hidden">
-          <h2>{{page.title}}</h2>
-          <p class="color-mode__excerpt">
-            {{ content }}
+{% endif %}{{ content }}
           </p>
         </div>
         <div class="color-mode__container light--hidden">
-          <h2>{{page.title}}</h2>
+          {% if page.image %} 
+<img alt="{{ page.title }}" title="{{ page.title }}" style="width: 100%; border-radius: 5px;" src="{{ page.image }}">
+{% endif %}
+          <h2>Chapter 1</h2>
           <p class="color-mode__excerpt">
-            {{ content }}
+{% unless page.metadate == "hide" %} 
+{{ page.date | date: '%B %d, %Y' }} 
+{% endunless %}
+{% if page.author %}
+, by {{page.author | capitalize}} 
+{% endif %}{{ content }}
           </p>
         </div>
-
 </article>
+      </section>
+    </main>
+    <script src="https://mohamadrido.github.io/parallax-jekyll-theme/assets/main.js"></script>
+    <script src="https://mohamadrido.com/assets/topnav.js"></script>
+  </body>
+</html>
