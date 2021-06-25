@@ -2,3 +2,16 @@
 ---
 layout: page
 ---
+<article>
+{% if page.image %} 
+<img alt="{{ page.title }}" title="{{ page.title }}" style="width: 100%; border-radius: 5px;" src="{{ page.image }}">
+{% endif %}
+<h2>{{page.title}}</h2>
+{% unless page.metadate == "hide" %} 
+{{ page.date | date: '%B %d, %Y' }} 
+{% endunless %}
+{% if page.author %}
+, by {{page.author | capitalize}} 
+{% endif %}
+{{ content }}
+</article>
