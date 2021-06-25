@@ -64,12 +64,8 @@
 <img alt="{{ page.title }}" title="{{ page.title }}" style="width: 100%; border-radius: 5px;" src="{{ page.image }}">
 {% endif %}
           <h2>Chapter 1</h2>
-{% unless page.metadate == "hide" %} 
-{{ page.date | date: '%B %d, %Y' }} 
-{% endunless %}
-{% if page.author %}
-, by {{page.author | capitalize}} 
-{% endif %}{{ content }}
+          <p class="color-mode__excerpt">
+          {{ content }}
           </p>
         </div>
         <div class="color-mode__container light--hidden">
@@ -78,12 +74,7 @@
 {% endif %}
           <h2>Chapter 1</h2>
           <p class="color-mode__excerpt">
-{% unless page.metadate == "hide" %} 
-{{ page.date | date: '%B %d, %Y' }} 
-{% endunless %}
-{% if page.author %}
-, by {{page.author | capitalize}} 
-{% endif %}{{ content }}
+          {{ content }}
           </p>
         </div>
 </article>
