@@ -1,5 +1,5 @@
-:root {
-  --radius: 50px;
+    :root {
+  --radius: 10px;
   --sans: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu,
     cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -15,7 +15,7 @@
   --primary: #01408e;
   --secondary: #3c5d5c;
   --tertiary: #fff7d6;
-  --box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
+  --box-shadow: 2px 2px 6px #cacaca, -2px -2px 6px #ffffff;
 }
 
 :root[color-mode="dark"] {
@@ -29,7 +29,7 @@
   --primary: #8fceff;
   --secondary: #72faca;
   --tertiary: #eee8a9;
-  --box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
+  --box-shadow: 2px 2px 6px #1d1d1d, -2px -2px 6px #272727;
 }
 
 html {
@@ -108,8 +108,8 @@ body {
 }
 
 .color-mode__btn svg {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   margin-left: 7px;
   fill: none;
   stroke: #222222;
