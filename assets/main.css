@@ -15,7 +15,7 @@
   --primary: #01408e;
   --secondary: #3c5d5c;
   --tertiary: #fff7d6;
-  --box-shadow: 2px 2px 6px #cacaca, -2px -2px 6px #cacaca;
+  --box-shadow: 1px 2px 5px #cacaca, -1px -2px 5px #cacaca;
 }
 
 :root[color-mode="dark"] {
@@ -29,7 +29,7 @@
   --primary: #8fceff;
   --secondary: #72faca;
   --tertiary: #eee8a9;
-  --box-shadow: 2px 2px 6px #1d1d1d, -2px -2px 6px #272727;
+  --box-shadow: 1px 2px 5px #1d1d1d, -1px -2px 5px #1d1d1d;
 }
 
 html {
