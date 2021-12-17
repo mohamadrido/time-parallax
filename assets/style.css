@@ -1,61 +1,136 @@
-body, html {
-  height: 100%;
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(235,235,235);
+background-color:rgb(20,20,20);
+margin: 0;
+padding: 0;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.parallax [class*="bg__"] {
   position: relative;
-  opacity: 0.65;
+  height: 300px;
+  text-indent: -9999px;
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: top center;
   background-size: cover;
-
 }
-.bgimg-1 {
-  background-image: url("https://www.w3schools.com/howto/img_parallax.jpg");
-  min-height: 100%;
+.parallax [class*="bg__"]:nth-child(2n) {
+  box-shadow: inset 0 0 1em #111;
+}
+.parallax .bg__foo, .parallax .bg__bazz {
+  height: 100vh;
+}
+.parallax .bg__foo {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax1.jpg);
+}
+.parallax .bg__bar {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax2.jpg);
+}
+.parallax .bg__baz {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax3.jpg);
+}
+.parallax .bg__bazz {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax1.jpg);
+}
+.parallax .bg__break {
+  box-shadow: inset 0 0 1em #111;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax1.jpg);
+}
+.parallax .capture {
+  float: right;
+  width: 200px;
+  padding: 1em;
+  margin: -1.5em 1em 0 0;
+  text-indent: 0;
+  background: rgba(243, 243, 243, 0.75);
+  color:rgb(20,20,20);
 }
 
-.bgimg-2 {
-  background-image: url("https://www.w3schools.com/howto/img_parallax2.jpg");
-  min-height: 400px;
+.b-s {
+  box-shadow: 0 1px 0.125em #333;
 }
 
-.bgimg-3 {
-  background-image: url("https://www.w3schools.com/howto/img_parallax3.jpg");
-  min-height: 400px;
+.l-k {
+  color:#008b8b;
 }
 
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
+.l-p a {
+  color:#008b8b;
+}
+
+.l-p a:hover {
+  color:#333;
+}
+
+.f-h {
+  font-size: 1.6em;
+}
+
+.f-p {
+  font-size: 1.1em;
+}
+
+a {
+  text-decoration:none;
+  color:#fff;
+}
+a:hover {
+  color:rgb(235,235,235);
+}
+
+.title {
+  color: #333;
+}
+
+.title:hover {
+  color: #007c7c;
+}
+
+#button, #center {
+  text-align:center;
+}
+
+.button {
+text-align:center;color:#fff;background-color:#008b8b;border:none;cursor:pointer;padding:0px 25px 0px 25px;
+}
+.button:hover {
+text-align:center;color:#fff;background-color:#007c7c;border:none;cursor:pointer;padding:0px 25px 0px 25px;
+}
+
+article .container {
   width: 100%;
-  text-align: center;
-  color: #000;
+  margin: 0 auto;
+  width:100%;max-width:1280px;
+}
+article .page {
+  position: relative;
+  margin: -10em 0 0 0;
+  padding: 1em;
+  text-align: left;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+article .header {
+  position: relative;
+  margin: -5em 0 0 0;
+  padding: 1em;
+  text-align: left;
+  font-size: 2em;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+article h1, article h2 {
+  margin: 0 0 0.333em;
+}
+article section {
+  padding: 3em;
+}
+article section.parallax {
+  margin: 0;
+  padding: 0;
 }
 
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-  }
+#frame {
+  width:100%;
+  margin: 0;
 }
